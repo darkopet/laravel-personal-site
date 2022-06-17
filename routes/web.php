@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// LARAVEL Welcome
+Route::get('/laravel', function () {
+    return view('laravel');
+});
+
+Route::get('/', function (){
+    return view('intro');
+});
+
+
+Route::get('/about', function(){
+    return view('about');
+});
+
+Route::get('/contact', function(){
+    return view('contact');
 });
