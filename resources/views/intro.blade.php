@@ -35,6 +35,20 @@
             line-height: 1.5
         }
 
+        span {
+            display: inline-block;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .myfirstspan {
+            padding-right:20px;
+        } 
+        
         *,
         :after,
         :before {
@@ -443,8 +457,9 @@
                                 <a href="/hobbies" class="underline text-gray-900 dark:text-white text-lg">Hobbies</a>
                             </span>
                             <span class="ml-4 text-sm font-semibold">
-                                <a href="/cvitae" class="underline text-gray-900 dark:text-white text-lg">CV</a>
+                                <a href="/professional" class="underline text-gray-900 dark:text-white text-lg">Professional</a>
                             </span>
+                            <img src="https://avatars.githubusercontent.com/u/20263411?v=4" alt="Darko" class="center absolute"></img>
                         </div>
                     </div>
 
@@ -483,7 +498,7 @@
             </div>
 
             <div class="flex mt-8">
-                <span class="svg-div mr-8 pr-8 br-8">
+                <span class="myfirstspan svg-div mr-8 pr-8 br-8">
                     <svg style="height: 60px; width: 60px; color:#0000FF;" 
                          xmlns="http://www.w3.org/2000/svg" 
                          viewBox="0 0 448 512">
@@ -494,7 +509,7 @@
                         </a>
                     </svg>
                 </span>
-                <span class="svg-div mr-8 pr-8 br-8">
+                <span class="myfirstspan svg-div mr-8 pr-8 br-8">
                     <svg style="height: 60px; width: 60px; color: rgb(0, 0, 0);" 
                          xmlns="http://www.w3.org/2000/svg" 
                          viewBox="0 0 16 16">
@@ -504,7 +519,7 @@
                         </a>
                     </svg>
                 </span>
-                <span class="svg-div mr-8 pr-8 br-8">
+                <span class="myfirstspan svg-div mr-8 pr-8 br-8">
                     <svg style="height: 70px; width: 70px; color: red" 
                          xmlns="http://www.w3.org/2000/svg" 
                          fill="currentColor" 

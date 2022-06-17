@@ -22,11 +22,18 @@ Route::get('/', function (){
     return view('intro');
 });
 
-
 Route::get('/about', function(){
     return view('about');
 });
 
 Route::get('/contact', function(){
     return view('contact');
+});
+
+Route::get('/hobbies', function(){
+    return view('hobbies');
+});
+
+Route::get('/professional', function(){
+    return view('professional');
 });

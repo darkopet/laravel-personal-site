@@ -13,6 +13,7 @@
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I'll be right there!
     </p>
 
+    
     <div class="row">
 
         <!--Grid column-->
