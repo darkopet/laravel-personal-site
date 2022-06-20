@@ -7,6 +7,7 @@
         </div>
 
         <div class="mt-8 flex flex-col justify-between">
+            
             <header>
 
                 <div class="space-x-2">
@@ -27,9 +28,11 @@
 
             </header>
 
+            
             <div class="text-sm mt-4 space-y-4">
                 {!! $post->excerpt !!}
             </div>
+
 
             <footer class="flex justify-between items-center mt-8">
                 <div class="flex items-center text-sm">
@@ -46,6 +49,7 @@
                         Read More
                     </a>
                 </div>
+
             </footer>
         </div>
     </div>
