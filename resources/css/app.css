@@ -77,7 +77,7 @@ video {
 .btnStack {
     font-family: Oswald;
     background-color: orange;
-    color: #000;
+    color: #FFF;
     text-decoration: none;
     display: inline-block;
     padding: 6px 12px;
@@ -97,7 +97,6 @@ video {
     -o-user-select: none;
     user-select: none;
 }
-
 a.btnStack:hover {
     background-color: #000;
     color: #fff;

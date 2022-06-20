@@ -72,6 +72,30 @@
             height: auto
         }
 
+        .btnStack {
+            font-family: Oswald;
+            background-color: gray;
+            color: #FFF;
+            text-decoration: none;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
         .bg-white {
             --bg-opacity: 1;
             background-color: #fff;
@@ -445,16 +469,16 @@
                                 <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             <span class="ml-4 text-sm font-semibold">
-                                <a href="/about" class="underline text-gray-900 dark:text-white text-lg">About</a>
+                                <a href="/about" class="underline text-white-900 dark:text-white text-lg btnStack">About</a>
                             </span>
                             <span class="ml-4 text-sm font-semibold">
-                                <a href="/contact" class="underline text-gray-900 dark:text-white text-lg">Contact</a>
+                                <a href="/contact" class="underline text-white-900 dark:text-white text-lg btnStack">Contact</a>
                             </span>
                             <span class="ml-4 text-sm font-semibold">
-                                <a href="/hobbies" class="underline text-gray-900 dark:text-white text-lg">Hobbies</a>
+                                <a href="/hobbies" class="underline text-white-900 dark:text-white text-lg btnStack">Hobbies</a>
                             </span>
                             <span class="ml-4 text-sm font-semibold">
-                                <a href="/professional" class="underline text-gray-900 dark:text-white text-lg">Professional</a>
+                                <a href="/professional" class="underline text-white-900 dark:text-white text-lg btnStack">Professional</a>
                             </span>
                             <x-button>Travel</x-button>
                             <img src="https://avatars.githubusercontent.com/u/20263411?v=4" alt="Darko" class="center absolute"></img>

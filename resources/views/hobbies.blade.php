@@ -114,7 +114,6 @@
             -o-user-select: none;
             user-select: none;
         }
-
         a.btnStack:hover {
             background-color: #000;
             color: #fff;
@@ -461,7 +460,7 @@
         @endif
 
         <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
-            
+
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
                     <g clip-path="url(#clip0)" fill="#EF3B2D"></g>
@@ -479,10 +478,10 @@
                             <span class="ml-4 text-sm font-semibold btnStack">
                                 <a href="/about" class="underline text-gray-900 dark:text-white text-lg">About</a>
                             </span>
-                            <span class="ml-4 text-sm font-semibold">
+                            <span class="ml-4 text-sm font-semibold btnStack">
                                 <a href="/contact" class="underline text-gray-900 dark:text-white text-lg">Contact</a>
                             </span>
-                            <span class="ml-4 text-sm font-semibold">
+                            <span class="ml-4 text-sm font-semibold btnStack">
                                 <a href="/professional" class="underline text-gray-900 dark:text-white text-lg">Professional</a>
                             </span>
                         </div>
