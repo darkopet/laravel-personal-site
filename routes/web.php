@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // LARAVEL Welcome
+
 Route::get('/laravel', function () {
     return view('laravel');
 });
