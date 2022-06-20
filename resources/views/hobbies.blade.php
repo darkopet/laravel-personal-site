@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<a href="/" 
-   class="underline text-gray-900 dark:text-white">
-   Darko's Home
+<a href="/" class="underline text-gray-900 dark:text-white">
+    <button>Darko's Home</button>
 </a>
 
 <head>
@@ -43,11 +42,11 @@
         span {
             display: inline-block;
         }
-        
+
         .myfirstspan {
-            padding-right:20px;
-        } 
-        
+            padding-right: 20px;
+        }
+
         *,
         :after,
         :before {
@@ -90,6 +89,35 @@
 
         .border-t {
             border-top-width: 1px
+        }
+
+        .btnStack {
+            font-family: Oswald;
+            background-color: orange;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        a.btnStack:hover {
+            background-color: #000;
+            color: #fff;
         }
 
         .flex {
@@ -446,7 +474,7 @@
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                 <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            <span class="ml-4 text-sm font-semibold">
+                            <span class="ml-4 text-sm font-semibold btnStack">
                                 <a href="/about" class="underline text-gray-900 dark:text-white text-lg">About</a>
                             </span>
                             <span class="ml-4 text-sm font-semibold">
@@ -468,7 +496,7 @@
 
                                     <h4>1</h4>
                                     <p>Hobby 1</p>
-                                    
+
                                     <h4>2</h4>
                                     <p>Hobby 2</p>
                                 </div>
@@ -480,9 +508,7 @@
 
             <div class="flex mt-8">
                 <span class="myfirstspan svg-div mr-8 pr-8 br-8">
-                    <svg style="height: 60px; width: 60px; color:#0000FF;" 
-                         xmlns="http://www.w3.org/2000/svg" 
-                         viewBox="0 0 448 512">
+                    <svg style="height: 60px; width: 60px; color:#0000FF;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                         <a href="https://www.linkedin.com/in/darkopetrovski/">
                             <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" fill="#0000ff">
@@ -491,9 +517,7 @@
                     </svg>
                 </span>
                 <span class="myfirstspan svg-div mr-8 pr-8 br-8">
-                    <svg style="height: 60px; width: 60px; color: rgb(0, 0, 0);" 
-                         xmlns="http://www.w3.org/2000/svg" 
-                         viewBox="0 0 16 16">
+                    <svg style="height: 60px; width: 60px; color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <a href="https://github.com/darkopet">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" fill="#000000">
                             </path>
@@ -501,14 +525,10 @@
                     </svg>
                 </span>
                 <span class="myfirstspan svg-div mr-8 pr-8 br-8">
-                    <svg style="height: 70px; width: 70px; color: red" 
-                         xmlns="http://www.w3.org/2000/svg" 
-                         fill="currentColor" 
-                         class="bi bi-youtube" 
-                         viewBox="0 0 16 16"> 
-                         <a href="https://www.youtube.com/user/darkodepetrovski/videos">
+                    <svg style="height: 70px; width: 70px; color: red" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <a href="https://www.youtube.com/user/darkodepetrovski/videos">
                             <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" fill="red">
-                            </path> 
+                            </path>
                         </a>
                     </svg>
                 </span>

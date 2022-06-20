@@ -1,7 +1,8 @@
 <a href="/" 
    class="underline text-gray-900 dark:text-white">
-   Darko's Home
+      <button>Darko's Home</button>
 </a>
+
 
 <!--Section: Contact v.2-->
 <section class="mb-4">

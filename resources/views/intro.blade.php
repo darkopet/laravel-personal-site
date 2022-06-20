@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Welcome at Darko's Palace</title>
+    <title>Welcome at Darko's Home</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -435,7 +435,7 @@
         @endif
 
         <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
-            <h1>Welcome at Darko's Palace</h1>
+            <h1>Welcome at Darko's Home</h1>
 
             <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
@@ -444,7 +444,6 @@
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                 <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-
                             <span class="ml-4 text-sm font-semibold">
                                 <a href="/about" class="underline text-gray-900 dark:text-white text-lg">About</a>
                             </span>
@@ -457,6 +456,7 @@
                             <span class="ml-4 text-sm font-semibold">
                                 <a href="/professional" class="underline text-gray-900 dark:text-white text-lg">Professional</a>
                             </span>
+                            <x-button>Travel</x-button>
                             <img src="https://avatars.githubusercontent.com/u/20263411?v=4" alt="Darko" class="center absolute"></img>
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                 <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
