@@ -471,6 +471,9 @@
                                 <a href="/about" class="underline text-white-900 dark:text-white text-lg btnStack">About</a>
                             </span>
                             <span class="ml-4">
+                                <a href="/thoughts" class="underline text-white-900 dark:text-white text-lg btnStack">Thoughts</a>
+                            </span>
+                            <span class="ml-4">
                                 <a href="/contact" class="underline text-white-900 dark:text-white text-lg btnStack">Contact</a>
                             </span>
                             <span class="ml-4">
@@ -480,7 +483,7 @@
                                 <a href="/professional" class="underline text-white-900 dark:text-white text-lg btnStack">Professional</a>
                             </span>
 
-                            <x-button class="ml-4 underline text-white-900 dark:text-white text-lg btnStackml-4 btnStack">Travel</x-button>
+                            <!-- <x-button class="ml-4 underline text-white-900 dark:text-white text-lg btnStackml-4 btnStack">Travel</x-button> -->
 
                             <img src="https://avatars.githubusercontent.com/u/20263411?v=4" alt="Darko" class="center absolute"></img>
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">

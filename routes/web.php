@@ -20,21 +20,25 @@ Route::get('/laravel', function () {
 });
 
 Route::get('/', function (){
-    return view('intro');
+    return view('life.intro');
 });
 
-Route::get('/about', function(){
-    return view('about');
+Route::get('about', function(){
+    return view('life.about');
 });
 
-Route::get('/contact', function(){
-    return view('contact');
+Route::get('thoughts', function(){
+    return view('posts.index');
 });
 
-Route::get('/hobbies', function(){
-    return view('hobbies');
+Route::get('contact', function(){
+    return view('life.contact');
 });
 
-Route::get('/professional', function(){
-    return view('professional');
+Route::get('hobbies', function(){
+    return view('life.hobbies');
+});
+
+Route::get('professional', function(){
+    return view('life.professional');
 });
