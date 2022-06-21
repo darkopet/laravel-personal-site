@@ -1,6 +1,13 @@
 <?php
 
+use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\PostCommentsController;
+// use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +34,6 @@ Route::get('about', function(){
     return view('life.about');
 });
 
-
-
 Route::get('contact', function(){
     return view('life.contact');
 });
@@ -42,12 +47,12 @@ Route::get('professional', function(){
 });
 
 
-// Route::get('/thoughts', [PostController::class, 'index']);
-Route::get('thoughts', function(){
-    return view('posts.index');
-});
+// Route::get('thoughts', function(){
+//     return view('posts.index');
+// });
+Route::get('/thoughts', [PostController::class, 'index']);
+Route::get('/thoughts/{post:slug}', [PostController::class, 'show']);  
 
-Route::get('/posts/{post:slug}', [PostController::class, 'show']);  
 
 Route::get('/posts/admin/create', [PostController::class, 'create'])->middleware('admin');
 Route::post('/posts/admin', [PostController::class, 'store'])->middleware('admin');
