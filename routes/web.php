@@ -42,10 +42,10 @@ Route::get('professional', function(){
 });
 
 
-Route::get('/thoughts', [PostController::class, 'index']);
-// Route::get('thoughts', function(){
-//     return view('posts.index');
-// });
+// Route::get('/thoughts', [PostController::class, 'index']);
+Route::get('thoughts', function(){
+    return view('posts.index');
+});
 
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);  
 

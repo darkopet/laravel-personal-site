@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Validation\ValidationException;
-use App\Models\User;
-
 
 class SessionsController extends Controller
 {
@@ -12,7 +10,6 @@ class SessionsController extends Controller
     {
         return view('sessions.create');
     }
-
     public function store()
     {   
         // VALIDATION OF THE REQUEST
@@ -32,7 +29,6 @@ class SessionsController extends Controller
         return redirect('/posts')->with('success', 'Welcome Back!');
        
     }
-
     public function destroy()
     {
         auth()->logout();
