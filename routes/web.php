@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // LARAVEL Welcome
 
 Route::get('/laravel', function () {
-    return view('laravel');
+    return view('life.laravel');
 });
 
 Route::get('/', function (){
@@ -41,4 +41,26 @@ Route::get('hobbies', function(){
 
 Route::get('professional', function(){
     return view('life.professional');
+});
+
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);  
+
+Route::get('/posts/admin/create', [PostController::class, 'create'])->middleware('admin');
+Route::post('/posts/admin', [PostController::class, 'store'])->middleware('admin');
+
+Route::post('/posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
+
+Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
+Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
+
+Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
+Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
+
+Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+// Route::post('newsletter', NewsletterController::class);
+
+Route::middleware('can:admin')->group(function () {
+    Route::resource('admin/posts', AdminPostController::class)->except('show');
 });
