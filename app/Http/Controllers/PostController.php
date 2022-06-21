@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post2;
+use App\Models\Post;
 use Illuminate\Validation\Rule;
 
 
@@ -11,10 +11,10 @@ class PostController extends Controller
     public function index()
     {
         return view('posts.index', [
-            'posts' => Post2::latest()->filter(request(['search','category', 'author']))->paginate(6)->withQueryString()
+            'posts' => Post::latest()->filter(request(['search','category', 'author']))->paginate(6)->withQueryString()
         ]);
     }
-    public function show(Post2 $post)
+    public function show(Post $post)
     {
         return view('posts.show', [
             'post' => $post 
@@ -30,7 +30,7 @@ class PostController extends Controller
     //     $attributes = request()->validate([
     //         'title' => 'required',
     //         'thumbnail' => 'required|image',
-    //         'slug' => ['required', Rule::unique('post2s', 'slug')],
+    //         'slug' => ['required', Rule::unique('posts', 'slug')],
     //         'excerpt' => 'required',
     //         'body' => 'required',
     //         'category_id' => ['required', Rule::exists('categories', 'id')]
@@ -39,7 +39,7 @@ class PostController extends Controller
     //     $attributes['user_id'] = auth()->id();
     //     $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
 
-    //     Post2::create($attributes);
+    //     Post::create($attributes);
 
     //     return redirect('/posts');
     // }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post2;
+use App\Models\Post;
 use Illuminate\Validation\Rule;
 
 class AdminPostController extends Controller
@@ -10,7 +10,7 @@ class AdminPostController extends Controller
     public function index()
     {
         return view('admin.posts.index', [
-            'posts' => Post2::paginate(100)
+            'posts' => Post::paginate(100)
         ]);
     }
 
@@ -27,17 +27,17 @@ class AdminPostController extends Controller
         //         'thumbnail' => request()->file('thumbnail')->store('thumbnails')
         //     ]);
         // dd($attributes);
-        // Post2::create(array_merge($this->validatePost(), [
+        // Post::create(array_merge($this->validatePost(), [
         //     'user_id' => request()->user()->id,
         //     'thumbnail' => request()->file('thumbnail')->store('thumbnails')
         // ]));
-        // Post2::create($attributes);
+        // Post::create($attributes);
         // return redirect('/posts');
 
         $attributes = request()->validate([
             'title' => 'required',
             'thumbnail' => 'required|image',
-            'slug' => ['required', Rule::unique('post2s', 'slug')],
+            'slug' => ['required', Rule::unique('posts', 'slug')],
             'excerpt' => 'required',
             'body' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')]
@@ -46,17 +46,17 @@ class AdminPostController extends Controller
         $attributes['user_id'] = auth()->id();
         $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
 
-        Post2::create($attributes);
+        Post::create($attributes);
 
         return redirect('/posts');
     }
 
-    public function edit(Post2 $post)
+    public function edit(Post $post)
     {
         return view('admin.posts.edit', ['post' => $post]);
     }
 
-    public function update(Post2 $post)
+    public function update(Post $post)
     {
         // $attributes = $this->validatePost($post);
         // if ($attributes['thumbnail'] ?? false) {
@@ -68,7 +68,7 @@ class AdminPostController extends Controller
         $attributes = request()->validate([
             'title' => 'required',
             'thumbnail' => 'image',
-            'slug' => ['required', Rule::unique('post2s', 'slug')->ignore($post->id)],
+            'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post->id)],
             'excerpt' => 'required',
             'body' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')]
@@ -81,20 +81,20 @@ class AdminPostController extends Controller
         return back()->with('success', 'Post Updated!');
     }
 
-    public function destroy(Post2 $post)
+    public function destroy(Post $post)
     {
         $post->delete();
         return back()->with('success', 'Post Deleted!');
     }
 
-    // protected function validatePost(?Post2 $post = null): array
+    // protected function validatePost(?Post $post = null): array
     // {
-    //     $post ??= new Post2();
+    //     $post ??= new Post();
     //     // dd($post);
     //     return request()->validate([
     //         'title' => 'required',
     //         'thumbnail' => $post->exists ? ['image'] : ['required', 'image'],
-    //         'slug' => ['required', Rule::unique('post2s', 'slug')->ignore($post)],
+    //         'slug' => ['required', Rule::unique('s', 'slug')->ignore($post)],
     //         'excerpt' => 'required',
     //         'body' => 'required',
     //         'category_id' => ['required', Rule::exists('categories', 'id')],

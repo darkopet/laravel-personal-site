@@ -27,9 +27,7 @@ Route::get('about', function(){
     return view('life.about');
 });
 
-Route::get('thoughts', function(){
-    return view('posts.index');
-});
+
 
 Route::get('contact', function(){
     return view('life.contact');
@@ -44,7 +42,11 @@ Route::get('professional', function(){
 });
 
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/thoughts', [PostController::class, 'index']);
+// Route::get('thoughts', function(){
+//     return view('posts.index');
+// });
+
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);  
 
 Route::get('/posts/admin/create', [PostController::class, 'create'])->middleware('admin');
