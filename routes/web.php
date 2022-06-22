@@ -54,8 +54,12 @@ Route::get('/thoughts', [PostController::class, 'index']);
 Route::get('/thoughts/{post:slug}', [PostController::class, 'show']);  
 
 
+Route::middleware('can:admin')->group(function () {
+    Route::resource('admin/thoughts', AdminPostController::class)->except('show');});
+
 Route::get('/thoughts/admin/create', [PostController::class, 'create'])->middleware('admin');
 Route::post('/thoughts/admin', [PostController::class, 'store'])->middleware('admin');
+
 
 Route::post('/thoughts/{post:slug}/comments', [PostCommentsController::class, 'store']);
 
@@ -68,6 +72,3 @@ Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
 // Route::post('newsletter', NewsletterController::class);
 
-Route::middleware('can:admin')->group(function () {
-    Route::resource('admin/posts', AdminPostController::class)->except('show');
-});

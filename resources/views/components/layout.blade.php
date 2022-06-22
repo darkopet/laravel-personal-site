@@ -65,15 +65,17 @@
 
                         <!-- <x-dropdown-item href="/admin/dashboard" :active="request()->is('posts/admin')">Dashboard</x-dropdown-item>
                         <x-dropdown-item href="/admin/create" :active="request()->is('admin/posts/create')">New Post</x-dropdown-item> -->
+                        
                         @admin
-                            <x-dropdown-item href="/admin/thoughts" :active="request()->is('admin/posts')">Dashboard</x-dropdown-item>
-                            <x-dropdown-item href="/admin/thoughts/create" :active="request()->is('admin/posts/create')">New Post</x-dropdown-item>
+                            <x-dropdown-item href="/admin/thoughts" :active="request()->is('admin/thoughts')">Dashboard</x-dropdown-item>
+                            <x-dropdown-item href="/admin/thoughts/create" :active="request()->is('admin/thoughts/create')">New Post</x-dropdown-item>
                         @endadmin
-                        <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out</x-dropdown-item>
+                            
+                            <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">Log Out</x-dropdown-item>
 
-                        <form id="logout-form" method="POST" action="/logout" class="hidden">
-                            @csrf
-                        </form>
+                            <form id="logout-form" method="POST" action="/logout" class="hidden">
+                                @csrf
+                            </form>
                     </x-dropdown>
                 @else
                     <a href="/register" class="text-xs font-bold uppercase {{ request()->is('register') ? 'text-blue-500' : '' }}">Register</a>

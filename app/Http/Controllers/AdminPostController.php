@@ -10,14 +10,14 @@ class AdminPostController extends Controller
 {
     public function index()
     {
-        return view('admin.posts.index', [
+        return view('admin.thoughts.index', [
             'post' => Post::paginate(100)
         ]);
     }
 
     public function create()
     {
-        return view('admin.posts.create');
+        return view('admin.thoughts.create');
     }
 
     public function store()
@@ -54,7 +54,7 @@ class AdminPostController extends Controller
 
     public function edit(Post $post)
     {
-        return view('admin.posts.edit', ['post' => $post]);
+        return view('admin.thoughts.edit', ['post' => $post]);
     }
 
     public function update(Post $post)
