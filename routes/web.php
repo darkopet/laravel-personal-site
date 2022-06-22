@@ -54,10 +54,10 @@ Route::get('/thoughts', [PostController::class, 'index']);
 Route::get('/thoughts/{post:slug}', [PostController::class, 'show']);  
 
 
-Route::get('/posts/admin/create', [PostController::class, 'create'])->middleware('admin');
-Route::post('/posts/admin', [PostController::class, 'store'])->middleware('admin');
+Route::get('/thoughts/admin/create', [PostController::class, 'create'])->middleware('admin');
+Route::post('/thoughts/admin', [PostController::class, 'store'])->middleware('admin');
 
-Route::post('/posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
+Route::post('/thoughts/{post:slug}/comments', [PostCommentsController::class, 'store']);
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');

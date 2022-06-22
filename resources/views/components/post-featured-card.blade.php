@@ -9,11 +9,11 @@
         <div class="flex-1 flex flex-col justify-between">
             <header class="mt-8 lg:mt-0">
                 <div class="space-x-2">
-                    <!-- <a href="/posts?category={{ $post->category->slug }}" 
+                    <a href="/thoughts?category={{ $post->category->slug }}" 
                        class="px-3 py-1 border border-blue-300 rounded-full text-blue-300 text-xs uppercase font-semibold" 
                        style="font-size: 10px">
                         {{ $post->category->name }}
-                    </a> -->
+                    </a>
                     <x-category-button :category="$post->category" />
                 </div>
 
@@ -39,7 +39,7 @@
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
                         <h5 class="font-bold">
-                            <a href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
+                            <a href="/thoughts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
                         </h5>
                     </div>
                 </div>

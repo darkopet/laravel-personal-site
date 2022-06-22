@@ -20,7 +20,7 @@ use Illuminate\Validation\ValidationException;
 //             ]);
 //         }
 
-//         return redirect('/posts')
+//         return redirect('/')
 //             ->with('success', 'You are now signed up for our newsletter!');
 //     }
 // }

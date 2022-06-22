@@ -33,7 +33,7 @@ class AdminPostController extends Controller
         //     'thumbnail' => request()->file('thumbnail')->store('thumbnails')
         // ]));
         // Post::create($attributes);
-        // return redirect('/posts');
+        // return redirect('/');
 
         $attributes = request()->validate([
             'title' => 'required',

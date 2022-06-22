@@ -15,7 +15,7 @@
 
                 <div class="mt-4">
                     <h1 class="text-3xl clamp one-line">
-                        <a href="/posts/{{ $post->slug }}">
+                        <a href="/thoughts/{{ $post->slug }}">
                             {{ $post->title }}
                         </a>
                     </h1>
@@ -36,13 +36,13 @@
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
                         <h5 class="font-bold">
-                            <a href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
+                            <a href="/thoughts?author={{ $post->author->username }}">{{ $post->author->name }}</a>
                         </h5>
                     </div>
                 </div>
 
                 <div>
-                    <a href="/posts/{{ $post['slug'] }}" class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8">
+                    <a href="/thoughts/{{ $post['slug'] }}" class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8">
                         Read More
                     </a>
                 </div>
