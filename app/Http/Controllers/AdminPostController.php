@@ -52,12 +52,12 @@ class AdminPostController extends Controller
         return redirect('/thoughts');
     }
 
-    public function edit(Post $post)
+    public function edit(Post $thought)     // $post does not take the item for database, $thought does and is deleted afterwards
     {
-        return view('admin.thoughts.edit', ['post' => $post]);
+        return view('admin.thoughts.edit', ['post' => $thought]);   // $post does not take the item for database, $thought does and is deleted afterwards
     }
 
-    public function update(Post $post)
+    public function update(Post $thought)
     {
         // $attributes = $this->validatePost($post);
         // if ($attributes['thumbnail'] ?? false) {
@@ -69,7 +69,7 @@ class AdminPostController extends Controller
         $attributes = request()->validate([
             'title' => 'required',
             'thumbnail' => 'image',
-            'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post->id)],
+            'slug' => ['required', Rule::unique('posts', 'slug')->ignore($thought->id)],
             'excerpt' => 'required',
             'body' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')]
@@ -78,7 +78,7 @@ class AdminPostController extends Controller
         if (isset($attributes['thumbnail'])) {
             $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
         }
-        $post->update($attributes);
+        $thought->update($attributes);
         return back()->with('success', 'Post Updated!');
     }
 
