@@ -56,6 +56,12 @@ Route::get('/thoughts/{post:slug}', [PostController::class, 'show']);
 
 Route::middleware('can:admin')->group(function () {
     Route::resource('admin/thoughts', AdminPostController::class)->except('show');});
+// Route::get('/admin/thoughts', [AdminPostController::class, 'index'])->middleware('admin');
+// Route::post('/admin/thougts', [AdminPostController::class, 'store'])->middleware('admin');
+// Route::get('/admin/thoughts/create', [AdminPostController::class, 'create'])->middleware('admin');
+// Route::get('/admin/{post}/edit', [AdminPostController::class, 'edit'])->middleware('admin');
+// Route::patch('/admin/{post}', [AdminPostController::class, 'update'])->middleware('admin');
+// Route::delete('/admin/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
 
 Route::get('/thoughts/admin/create', [PostController::class, 'create'])->middleware('admin');
 Route::post('/thoughts/admin', [PostController::class, 'store'])->middleware('admin');

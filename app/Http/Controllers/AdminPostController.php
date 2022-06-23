@@ -82,9 +82,9 @@ class AdminPostController extends Controller
         return back()->with('success', 'Post Updated!');
     }
 
-    public function destroy(Post $post)
+    public function destroy(Post $thought) // $post does not take the item for database, $thought does and is deleted afterwards
     {
-        $post->delete();
+        $thought->delete();
         return back()->with('success', 'Post Deleted!');
     }
 
