@@ -12,9 +12,14 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
+    {   
+        Schema::dropIfExists('contacts');
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('subject');
+            $table->text('message');
             $table->timestamps();
         });
     }
