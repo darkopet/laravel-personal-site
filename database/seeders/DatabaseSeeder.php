@@ -15,7 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {   
-        
+        $this->call(
+            [
+                ContactSeeder::class,
+                UserSeeder::class,
+                PostSeeder::class,
+                CategorySeeder::class
+            ]
+        );
 
     //    $user = User::factory()->create([
     //       'name' => 'John Doe'
