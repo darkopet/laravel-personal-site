@@ -19,8 +19,8 @@ class ContactFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'email_vereified_at' => now(),
-            'subject' => $this->faker->subject(),
+            'email_verified_at' => now(),
+            'subject' => $this->faker->sentence(),
             'message' => '<p>' . implode('</p><p>', $this->faker->paragraphs(6)) . '</p>'
         ];
     }
