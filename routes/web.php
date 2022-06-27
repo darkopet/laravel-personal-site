@@ -37,6 +37,9 @@ Route::get('about', function(){
 Route::get('contact', function(){
     return view('life.contactcreate');
 });
+Route::post('contact', function(){
+    return view('life.contactcreate');
+});
 
 Route::get('hobbies', function(){
     return view('life.hobbies');

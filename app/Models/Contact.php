@@ -10,7 +10,7 @@ class Contact extends Model
     use HasFactory;
 
 
-    protected $fillable = ['Your name', 'Your email', 'Subject', 'Message'];
+    protected $fillable = ['name', 'email', 'subject', 'message'];
 
     /**
      * The attributes that are mass assignable.
@@ -24,9 +24,7 @@ class Contact extends Model
      * @var array<int, string>
      */
     
-    protected $hidden = [
-        'remember_token',
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be cast.
