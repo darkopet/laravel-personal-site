@@ -13,8 +13,18 @@
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. I'll be right there!
     </p>
 
-    
-    <div class="row">
+    <x-layout>
+        <form method="POST" action="/contact" enctype="multipart/form-data">
+            @csrf  
+                <x-form.input name="Your name" required/>
+                <x-form.input name="Your email" required/>
+                <x-form.input name="Subject" type="sentence" required/>
+                <x-form.textarea name="Message" required/>
+                <x-form.button>Send</x-form.button>
+        </form>
+    </x-layout>
+
+    <!-- <div class="row"> -->
         <!--Grid column-->
         <!-- <div class="col-md-9 mb-md-0 mb-5">
             <form id="contact-form" name="contact-form" action="mail.php" method="POST"> -->
@@ -93,19 +103,6 @@
             </ul>
         </div> -->
         <!--Grid column-->
-
-    </div>
-
-</section>
+    <!-- </div>
+</section> -->
 <!--Section: Contact v.2-->
-
-<x-layout>
-        <form method="POST" action="/contact" enctype="multipart/form-data">
-            @csrf  
-                <x-form.input name="Your name" required/>
-                <x-form.input name="Your email" required/>
-                <x-form.input name="Subject" type="sentence" required/>
-                <x-form.textarea name="Message" required/>
-                <x-form.button>Send</x-form.button>
-        </form>
-</x-layout>

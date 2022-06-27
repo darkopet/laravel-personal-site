@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
+use App\Models\Contact;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 
@@ -10,7 +10,9 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('contacts.index');
+        return view('contacts.index', [
+            'contact' => Contact::paginate(20)
+        ]);
     }
 
     public function create()
@@ -18,21 +20,8 @@ class ContactController extends Controller
         return view('contacts.create');
     }
 
-        public function store()
+    public function store()
     {
-        // dd($this);
-        // $attributes = array_merge($this->validatePost(), [
-        //         'user_id' => request()->user()->id,
-        //         'thumbnail' => request()->file('thumbnail')->store('thumbnails')
-        //     ]);
-        // dd($attributes);
-        // Post::create(array_merge($this->validatePost(), [
-        //     'user_id' => request()->user()->id,
-        //     'thumbnail' => request()->file('thumbnail')->store('thumbnails')
-        // ]));
-        // Post::create($attributes);
-        // return redirect('/');
-
         $attributes = request()->validate([
             'name' => 'required',
             'email' => ['required',Rule::unique('contacts', 'email')],
@@ -40,8 +29,14 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
 
-        Comment::create($attributes);
+        Contact::create($attributes);
 
         return redirect('/thoughts');
+    }
+
+    public function destroy(Contact $contact)
+    {
+        $contact->delete();
+        return back()->with('success', 'Contact Deleted!');
     }
 }

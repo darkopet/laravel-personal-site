@@ -34,12 +34,14 @@ Route::get('about', function(){
     return view('life.about');
 });
 
+
 Route::get('contact', function(){
     return view('contacts.index');
 });
 Route::post('contact', function(){
     return view('contacts.create');
 });
+
 
 Route::get('hobbies', function(){
     return view('life.hobbies');
