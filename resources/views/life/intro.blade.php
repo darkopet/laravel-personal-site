@@ -460,7 +460,7 @@
         <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
             <h1>Welcome at Darko's Home</h1>
 
-                                <div class="p-6">
+                    <div class="p-6">
                         <div class="flex items-center">
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                 <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -507,14 +507,8 @@
                                 <div class="mt-2 text-gray-1000 dark:text-gray-400 text-lg">
                                     Welcome to Darko's Personal WWW Site.
 
-                                    <h4>What is Lorem Ipsum?</h4>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                    It has survived not only five centuries, but also the leap into electronic typesetting, 
-                                    remaining essentially unchanged. 
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <h4>Introductory</h4>
+                                    <p>Greeetings to You All Comming to this Ordinary place in Virtual World.</p>
                                     
                                     <h4>Why do we use it?</h4>
                                     <p>It is a long established fact that a reader will be distracted by the readable content 
