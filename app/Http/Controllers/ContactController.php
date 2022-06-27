@@ -10,12 +10,12 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('life.contactcreate');
+        return view('contacts.index');
     }
 
     public function create()
     {
-        return view('life.contactcreate');
+        return view('contacts.create');
     }
 
         public function store()

@@ -35,10 +35,10 @@ Route::get('about', function(){
 });
 
 Route::get('contact', function(){
-    return view('life.contactcreate');
+    return view('contacts.index');
 });
 Route::post('contact', function(){
-    return view('life.contactcreate');
+    return view('contacts.create');
 });
 
 Route::get('hobbies', function(){
