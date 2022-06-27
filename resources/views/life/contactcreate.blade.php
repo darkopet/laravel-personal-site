@@ -100,7 +100,7 @@
 <!--Section: Contact v.2-->
 
 <x-layout>
-        <form method="POST" action="/life" enctype="multipart/form-data">
+        <form method="POST" action="/contact" enctype="multipart/form-data">
             @csrf  
                 <x-form.input name="Your name" required/>
                 <x-form.input name="Your email" required/>

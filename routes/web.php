@@ -35,7 +35,7 @@ Route::get('about', function(){
 });
 
 Route::get('contact', function(){
-    return view('life.contact');
+    return view('life.contactcreate');
 });
 
 Route::get('hobbies', function(){
