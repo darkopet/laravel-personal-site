@@ -12,6 +12,7 @@
         <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-200">
                             <tbody class="bg-white divide-y divide-gray-200">
@@ -30,14 +31,14 @@
                                     <!-- <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="/contacts/{{ $contact->id }}/edit" class="text-blue-500 hover:text-blue-600">Edit</a>
                                     </td> -->
-                                        <form method="POST" action="/contact" enctype="multipart/form-data">
-                                            @csrf
-                                            <x-form.input name="Your name" required />
-                                            <x-form.input name="Your email" required />
-                                            <x-form.input name="Subject" type="sentence" required />
-                                            <x-form.textarea name="Message" required />
-                                            <x-form.button>Send</x-form.button>
-                                        </form>
+                                    <form method="POST" action="/contact" enctype="multipart/form-data">
+                                        @csrf
+                                        <x-form.input name="Your name" required />
+                                        <x-form.input name="Your email" required />
+                                        <x-form.input name="Subject" type="sentence" required />
+                                        <x-form.textarea name="Message" required />
+                                        <x-form.button>Send</x-form.button>
+                                    </form>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <form method="POST" action="/contacts/{{ $contact->id }}">
                                             @csrf
@@ -51,6 +52,7 @@
                             </tbody>
                         </table>
                     </div>
+                    
                 </div>
             </div>
         </div>
