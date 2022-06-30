@@ -23,7 +23,7 @@
                 <div class="col-span-8">
                     <div class="hidden lg:flex justify-between mb-6">
                         <div class="space-x-2">
-                            <x-category-button :category="$post->category"/>
+                            <x-category-button :category="$post->category" />
                         </div>
                     </div>
 
@@ -39,7 +39,7 @@
                     @include ('posts._add-comment-form')
 
                     @foreach ($post->comments as $comment)
-                        <x-post-comment :comment="$comment"/>
+                    <x-post-comment :comment="$comment" />
                     @endforeach
                 </section>
             </article>
