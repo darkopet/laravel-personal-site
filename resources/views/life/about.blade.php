@@ -2,9 +2,8 @@
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<a href="/" 
-   class="underline text-gray-900 dark:text-white">
-      <button>Darko's Home</button>
+<a href="/" class="underline text-gray-900 dark:text-white">
+    <button>Darko's Home</button>
 </a>
 
 <head>
@@ -456,7 +455,7 @@
             </div>
         </div>
     </div>
-    </div>
+    
 </body>
 
 </html>

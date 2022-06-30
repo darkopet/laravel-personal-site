@@ -114,6 +114,7 @@
             -o-user-select: none;
             user-select: none;
         }
+
         a.btnStack:hover {
             background-color: #000;
             color: #fff;
@@ -488,17 +489,15 @@
             <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                 <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                     <div class="flex items-center">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" 
-                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" 
-                             class="w-8 h-8 text-gray-500">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                         </svg>
                         <div class="ml-1">
                             <div class="mt-2 text-gray-1000 dark:text-gray-400 text-lg">
-                                    Darko's Hobbies
+                                Darko's Hobbies
 
                                 <h4>Motosport</h4>
-                                <p>World Rally Championship (WRC), Formula 1 (F1), World Endurance Championship (WEC), 
-                                   24 Hours Le Mans
+                                <p>World Rally Championship (WRC), Formula 1 (F1), World Endurance Championship (WEC),
+                                    24 Hours Le Mans
                                 </p>
 
                                 <h4>Travel</h4>

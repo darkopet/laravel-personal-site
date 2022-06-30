@@ -38,7 +38,7 @@
         span {
             display: inline-block;
         }
-        
+
         .center {
             display: block;
             margin-left: auto;
@@ -46,9 +46,9 @@
         }
 
         .myfirstspan {
-            padding-right:20px;
-        } 
-        
+            padding-right: 20px;
+        }
+
         *,
         :after,
         :before {
@@ -439,33 +439,33 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
-      <a href="/" class="underline text-gray-900 dark:text-white big">
-         <button>Darko's Home</button>
-      </a>
+    <a href="/" class="underline text-gray-900 dark:text-white big">
+        <button>Darko's Home</button>
+    </a>
 </head>
 
 <body>
-   <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-      <div class="grid grid-cols-1 md:grid-cols-2">
-         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-            <div class="mt-2 text-gray-1000 dark:text-gray-400 text-lg">
-               <a href="https://php.net" class="underline text-gray-900 dark:text-white big">
-                  <button>PHP: HyperText Preprocessor</button>
-               </a>
+    <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                <div class="mt-2 text-gray-1000 dark:text-gray-400 text-lg">
+                    <a href="https://php.net" class="underline text-gray-900 dark:text-white big">
+                        <button>PHP: HyperText Preprocessor</button>
+                    </a>
+                </div>
             </div>
-         </div>
-      </div>   
-   </div>
+        </div>
+    </div>
 
-   <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
-   <a href="https://laravel.com" class="underline text-gray-900 dark:text-white big">
-      <button>LARAVEL: The PHP Framework for Web Artisans</button>
-   </a>
-   </div>
+    <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
+        <a href="https://laravel.com" class="underline text-gray-900 dark:text-white big">
+            <button>LARAVEL: The PHP Framework for Web Artisans</button>
+        </a>
+    </div>
 
-   <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
-   <a href="https://canonical.com" class="underline text-gray-900 dark:text-white big">
-      <button>UBUNTU: Canonical - publisher of Ubuntu</button>
-   </a>
-   </div>
+    <div class="max-w-4xl mx-auto sm:px-4 lg:px-8">
+        <a href="https://canonical.com" class="underline text-gray-900 dark:text-white big">
+            <button>UBUNTU: Canonical - publisher of Ubuntu</button>
+        </a>
+    </div>
 </body>
